@@ -1,0 +1,15 @@
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.exe
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.deps.json
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.runtimeconfig.json
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.runtimeconfig.dev.json
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.dll
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Utils.pdb
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.csprojAssemblyReference.cache
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.AssemblyInfoInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.csproj.CoreCompileInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.csproj.CopyComplete
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.dll
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.pdb
+D:\.NET Core Projects\CSharp-.NETCore\NumberToLetter\obj\Debug\netcoreapp3.1\Utils.genruntimeconfig.cache

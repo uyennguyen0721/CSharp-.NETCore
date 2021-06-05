@@ -1,0 +1,13 @@
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.exe
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.deps.json
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.runtimeconfig.json
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.runtimeconfig.dev.json
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.dll
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\bin\Debug\netcoreapp3.1\CS_Delegate.pdb
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.csprojAssemblyReference.cache
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.AssemblyInfoInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.AssemblyInfo.cs
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.csproj.CoreCompileInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.dll
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.pdb
+D:\.NET Core Projects\CSharp-.NETCore\CS_Delegate\obj\Debug\netcoreapp3.1\CS_Delegate.genruntimeconfig.cache

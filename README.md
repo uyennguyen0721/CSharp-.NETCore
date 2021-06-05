@@ -15,7 +15,7 @@
         
         - Để chạy project, ta thực hiện lệnh: dotnet run
 
-* Delegate là một kiểu được dùng để khia báo tạo ra cac biến và các biến này tham chiếu được đến các phương thức 
+* Delegate là một kiểu được dùng để khai báo tạo ra cac biến và các biến này tham chiếu được đến các phương thức 
 hay nói cách khác là nó được gán bằng các phương thức. Sau đó ta có thể dùng biến kiểu Delegate để thi hành những 
 phương thức đang được lưu ở trong biến đó:
-                    delegate (Type) <biến> = <phương thức>*/
+                    delegate (Type) <biến> = <phương thức> 

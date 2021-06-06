@@ -19,3 +19,9 @@
 hay nói cách khác là nó được gán bằng các phương thức. Sau đó ta có thể dùng biến kiểu Delegate để thi hành những 
 phương thức đang được lưu ở trong biến đó:
                     delegate (Type) <biến> = <phương thức> 
+
+* Null là từ khóa cho biết nó không tham chiếu đến đối tượng cả, từ khóa null được sử dụng cho những biến kiểu tham chiếu
+Nullable dùng để khai báo biến kiểu tham trị có khả năng nhận giá trị null: VD: int? a; a = null;
+
+* Kiểm tra biến đó có giá trị hay không (khác null hay không) ta dùng phương thức HasValue, phương thức này trả về kiểu bool
+Để gọi phương thức ta thực hiện <tên biến>.HasValue

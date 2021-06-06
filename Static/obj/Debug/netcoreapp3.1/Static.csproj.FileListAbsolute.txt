@@ -1,0 +1,13 @@
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.csprojAssemblyReference.cache
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.AssemblyInfoInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.AssemblyInfo.cs
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.csproj.CoreCompileInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.exe
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.deps.json
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.runtimeconfig.json
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.runtimeconfig.dev.json
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.dll
+D:\.NET Core Projects\CSharp-.NETCore\Static\bin\Debug\netcoreapp3.1\Static.pdb
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.dll
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.pdb
+D:\.NET Core Projects\CSharp-.NETCore\Static\obj\Debug\netcoreapp3.1\Static.genruntimeconfig.cache

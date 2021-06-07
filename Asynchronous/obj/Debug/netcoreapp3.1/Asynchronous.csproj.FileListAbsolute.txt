@@ -1,0 +1,13 @@
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.exe
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.deps.json
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.runtimeconfig.json
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.runtimeconfig.dev.json
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.dll
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\bin\Debug\netcoreapp3.1\Asynchronous.pdb
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.csprojAssemblyReference.cache
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.AssemblyInfoInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.AssemblyInfo.cs
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.csproj.CoreCompileInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.dll
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.pdb
+D:\.NET Core Projects\CSharp-.NETCore\Asynchronous\obj\Debug\netcoreapp3.1\Asynchronous.genruntimeconfig.cache

@@ -4,7 +4,7 @@
 
 * Các lệnh bên dưới đều được thực hiện trong Terminal: 
      
-        - Thêm packet Newtonsoft.Json (Không nhập version thì nó sex lấy version mới nhất): 
+        - Thêm packet Newtonsoft.Json (Không nhập version thì nó sẽ lấy version mới nhất): 
             dotnet add package Newtonsoft.Json --version 13.0.1
             
         - Xóa packet Newtonsoft.Json: 

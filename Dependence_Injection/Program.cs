@@ -1,5 +1,10 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
+using static Dependence_Injection.ClassB3;
+using System.IO;
 
 namespace Dependence_Injection
 {
@@ -211,6 +216,31 @@ Nếu lớp Horn sửa lại, ví dụ muốn khởi tạo Horn phải chỉ ra 
             var sv = new ClassB3(service_c, "Thực hiện trong ClassB3");
             return sv;
         }
+
+        // IOptions
+
+        // Lớp chứa các thiết lập của MyService
+        public class MyServiceOptions
+        {
+            public string data1 { get; set; }
+            public int data2 { get; set; }
+        }
+
+        public class MyService
+        {
+            public string data1 { get; set; }
+            public int data2 { get; set; }
+
+            // Tham số khởi tạo là IOptions, các tham số khởi tạo khác nếu có khai báo như bình thường
+            public MyService(IOptions<MyServiceOptions> options)
+            {
+                // Đọc được MyServiceOptions từ IOptions
+                MyServiceOptions opts = options.Value;
+                data1 = opts.data1;
+                data2 = opts.data2;
+            }
+            public void PrintData() => Console.WriteLine($"{data1} / {data2}");
+        }
     }
 
 
@@ -397,6 +427,54 @@ Nếu lớp Horn sửa lại, ví dụ muốn khởi tạo Horn phải chỉ ra 
             Console.WriteLine("-------------------------------");
 
             //services.AddSingleton<IClassB>(CreateB3Factory);
+
+            Console.WriteLine("-------------------------------");
+
+            services.Configure<MyServiceOptions>(
+                options => {
+                options.data1 = "Xin chao cac ban";
+                options.data2 = 2021;
+            });
+
+            services.AddSingleton<MyService>();
+            var provider4 = services.BuildServiceProvider();
+
+            var myservice = provider4.GetService<MyService>();
+            myservice.PrintData();
+
+            // Kết quả:
+            // Xin chao cac ban / 2021
+
+            Console.WriteLine("-------------------------------");
+
+            // nạp cấu hình dịch vụ từ file (file cấu hình DI)
+
+            IConfigurationRoot configurationRoot;
+
+            ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
+            configurationBuilder.SetBasePath(Directory.GetCurrentDirectory());
+            configurationBuilder.AddJsonFile("cauhinh.json");
+
+            configurationRoot = configurationBuilder.Build();
+
+            var key1 = configurationRoot.GetSection("section1").GetSection("key1").Value; //đọc key1 trong section1
+
+            Console.WriteLine(key1);
+
+            Console.WriteLine("-------------------------------");
+
+            // nạp cấu hình vào IOptions
+
+            /*var sectionMyServiceOptions = configurationRoot.GetSection("MyServiceOptions");
+
+            var services3 = new ServiceCollection();
+            services3.AddSingleton<MyService>();
+
+            services3.Configure<MyServiceOptions>(sectionMyServiceOptions);
+
+            var provider5 = services3.BuildServiceProvider();
+            var myService = provider5.GetService<MyService>();
+            myService.PrintData();*/
         }
     }
 }

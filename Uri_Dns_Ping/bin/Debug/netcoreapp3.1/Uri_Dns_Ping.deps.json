@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Uri_Dns_Ping/1.0.0": {
+        "runtime": {
+          "Uri_Dns_Ping.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Uri_Dns_Ping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.exe
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.deps.json
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.runtimeconfig.json
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.runtimeconfig.dev.json
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.dll
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\bin\Debug\netcoreapp3.1\HttpClientHandler.pdb
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.csprojAssemblyReference.cache
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.AssemblyInfoInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.AssemblyInfo.cs
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.csproj.CoreCompileInputs.cache
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.dll
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.pdb
+D:\.NET Core Projects\CSharp-.NETCore\HttpClientHandler\obj\Debug\netcoreapp3.1\HttpClientHandler.genruntimeconfig.cache

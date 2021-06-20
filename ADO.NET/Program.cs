@@ -80,6 +80,7 @@ namespace ADO.NET
 
             //----------------------- SQL COMMAND
 
+            /*
             command1.CommandText = "SELECT DanhmucID, TenDanhMuc, Mota FROM Danhmuc WHERE DanhmucID >= @DanhmucID"; // @DanhmucID là một biến
 
             var danhMucID = new MySqlParameter("@DanhmucID", 5); // tạo một biến Parameter và gán cho @DanhmucID = 5
@@ -110,6 +111,8 @@ namespace ADO.NET
                 Console.WriteLine("Không có dòng dữ liệu trả về");
             }
 
+            
+
             // ******* dùng Data table 
 
             var datatable = new DataTable();
@@ -119,6 +122,29 @@ namespace ADO.NET
 
             //command1.ExecuteScalar(); // trả về một giá trị (dòng 1, cột 1) mặc dù kết quả trả về là một tập dữ liệu
             //command1.ExecuteNonQuery(); // Insert, Update, Delete; nó ko trả về dữ liệu mà chỉ trả về số dòng dữ liệu bị tác động
+
+            */
+
+            // ********** StoredProcedure
+
+            command1.CommandText = "getProductInfo";
+            command1.CommandType = CommandType.StoredProcedure; // thiết lập kiểu truy vấn
+
+            var id = new MySqlParameter("@id", 0);
+            command1.Parameters.Add(id);
+
+            id.Value = 3;
+
+            var reader = command1.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                var tensp = reader["TenSanPham"];
+                var tendm = reader["TenDanhMuc"];
+
+                Console.WriteLine($"{tensp} - {tendm}");
+            }
 
             conn1.Close();
         }

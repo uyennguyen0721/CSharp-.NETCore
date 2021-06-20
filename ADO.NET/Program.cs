@@ -8,6 +8,31 @@ namespace ADO.NET
 {
     class Program
     {
+        static void ShowDataTable(DataTable table)
+        {
+            Console.WriteLine($"Tên bảng: {table.TableName}");
+
+            foreach(DataColumn c in table.Columns)
+            {
+                Console.Write($"{c.ColumnName,15}");
+            }
+
+            Console.WriteLine();
+
+            foreach(DataRow r in table.Rows)
+            {
+                for(int i = 0; i < table.Columns.Count; i++)
+                {
+                    Console.Write($"{r[i],15}");
+                }
+
+                //Console.Write($"{r[0], 20}");
+                //Console.Write($"{r["Họ tên"],20}");
+                //Console.Write($"{r["Tuổi"],20}");
+                Console.WriteLine();
+            }
+        }
+
         static void Main(string[] args)
         {
             /*
@@ -127,6 +152,7 @@ namespace ADO.NET
 
             // ********** StoredProcedure
 
+            /*
             command1.CommandText = "getProductInfo";
             command1.CommandType = CommandType.StoredProcedure; // thiết lập kiểu truy vấn
 
@@ -145,6 +171,73 @@ namespace ADO.NET
 
                 Console.WriteLine($"{tensp} - {tendm}");
             }
+            */
+
+            //------------------------- DATA TABLE
+
+            var dataset = new DataSet();
+            var table = new DataTable();
+            dataset.Tables.Add(table);
+
+            table.Columns.Add("STT");
+            table.Columns.Add("Họ tên");
+            table.Columns.Add("Tuổi");
+
+            table.Rows.Add(1, "Nguyễn Văn A", 25);
+            table.Rows.Add(2, "Nguyễn Thị B", 23);
+            table.Rows.Add(3, "Nguyễn Văn C", 26);
+
+            ShowDataTable(table);
+
+            //-------------------------- DATA ADAPTER
+
+            var adapter = new MySqlDataAdapter();
+            adapter.TableMappings.Add("Table", "NhanVien"); // thiết lập một ánh xạ một bảng Table tương ứng với bảng NhanVien trong CSDL
+
+            var dataSet = new DataSet();
+
+            // select command
+            adapter.SelectCommand = new MySqlCommand("SELECT NhanviennID, Ten, Ho FROM Nhanvien", conn1);
+
+            // insert command
+            adapter.InsertCommand = new MySqlCommand("INSERT INTO Nhanvien (Ho, Ten) values (@Ho, @Ten)", conn1);
+            adapter.InsertCommand.Parameters.Add("@Ho", MySqlDbType.VarChar, 255, "Ho"); // lấy từ cột Ho
+            adapter.InsertCommand.Parameters.Add("@Ten", MySqlDbType.VarChar, 255, "Ten"); // lấy từ cột Ten
+
+            // delete command
+            adapter.DeleteCommand = new MySqlCommand("DELETE FROM Nhanvien WHERE NhanviennID = @id", conn1);
+            var pr1 = adapter.DeleteCommand.Parameters.Add(new MySqlParameter("@id", MySqlDbType.Int32));
+            pr1.SourceColumn = "NhanviennID"; // lấy từ cột NhanvienID của bảng Nhanvien
+            pr1.SourceVersion = DataRowVersion.Original; // lấy phiên bản nào của dữ liệu cập nhật (vd lấy dữ liệu gốc)
+
+            //update command
+            adapter.UpdateCommand = new MySqlCommand("UPDATE Nhanvien SET Ho = @Ho, Ten = @Ten WHERE NhanviennID = @id", conn1);
+            var pr2 = adapter.UpdateCommand.Parameters.Add(new MySqlParameter("@id", MySqlDbType.Int32));
+            pr2.SourceColumn = "NhanviennID"; // lấy từ cột NhanvienID của bảng Nhanvien
+            pr2.SourceVersion = DataRowVersion.Original;
+            adapter.UpdateCommand.Parameters.Add("@Ho", MySqlDbType.VarChar, 255, "Ho"); // lấy từ cột Ho
+            adapter.UpdateCommand.Parameters.Add("@Ten", MySqlDbType.VarChar, 255, "Ten"); // lấy từ cột Ten
+
+
+            adapter.Fill(dataSet); // đổ dữ liệu vào dataSet
+
+            DataTable table1 = dataSet.Tables["NhanVien"];
+            ShowDataTable(table1);
+
+            /* thêm một dòng dữ liệu mới
+            var row = table1.Rows.Add();
+            row["Ten"] = "A";
+            row["Ho"] = "Nguyễn Văn"; */
+
+            /* xóa (xóa xong phải cập nhật lại)
+            table1.Rows[10].Delete(); // tính từ 0 */
+
+            /* cập nhật
+            var r = table1.Rows[9];
+            r["Ten"] = "Lan Anh"; */
+
+            // cập nhật lại CSDL trong MySQL từ dataSet
+            adapter.Update(dataSet);
 
             conn1.Close();
         }

@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EntityFramework",
+    "\\EntityFramework\\bin\\Debug\\netcoreapp3.1",
+    "\\EntityFramework\\Models"
   ],
+  "SelectedNode": "\\EntityFramework\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

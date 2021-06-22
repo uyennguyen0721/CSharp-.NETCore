@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nMTEXsSQyndLG2lq1olk8o69Zeto6PD6ZRmlBr6TcqrSV8fO71hGR+ZiuungkDXxpcPhEaQxVBnAP5jYzTd8gQ==",
+  "dgSpecHash": "NNcquB8Qdx/FQYKLj9Dh8HEQsQZSc9ePVKDgv5dvKK0oSqhDFdyBonBGQH73YUESqhx1QEpMwOnhoFxx5dEUsA==",
   "success": true,
   "projectFilePath": "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\EntityFramework.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\mysql.data\\8.0.25\\mysql.data.8.0.25.nupkg.sha512",
+    "C:\\Users\\uyenn\\.nuget\\packages\\mysql.data.entityframeworkcore\\8.0.22\\mysql.data.entityframeworkcore.8.0.22.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

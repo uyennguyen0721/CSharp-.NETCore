@@ -18,5 +18,7 @@ namespace EntityFramework
 
         [StringLength(50)]
         public string Provider { set; get; }
+
+        public void PrintInfo() => Console.WriteLine($"{ProductID} - {ProductName} - {Provider}");
     }
 }

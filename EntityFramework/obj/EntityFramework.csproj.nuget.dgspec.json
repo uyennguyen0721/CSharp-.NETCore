@@ -62,7 +62,7 @@
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[*, )"
             },
             "MySql.Data": {
               "target": "Package",

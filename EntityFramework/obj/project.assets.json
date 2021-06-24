@@ -6321,7 +6321,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
       "Microsoft.Extensions.DependencyInjection >= 5.0.1",
       "Microsoft.Extensions.Logging >= 5.0.0",
-      "Microsoft.Extensions.Logging.Console >= 5.0.0",
+      "Microsoft.Extensions.Logging.Console >= *",
       "MySql.Data >= 8.0.25",
       "MySql.Data.EntityFrameworkCore >= 8.0.22"
     ]
@@ -6387,7 +6387,7 @@
           },
           "Microsoft.Extensions.Logging.Console": {
             "target": "Package",
-            "version": "[5.0.0, )"
+            "version": "[*, )"
           },
           "MySql.Data": {
             "target": "Package",

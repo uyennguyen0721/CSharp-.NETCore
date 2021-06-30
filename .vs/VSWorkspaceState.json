@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\EntityFramework",
-    "\\EntityFramework\\bin\\Debug\\netcoreapp3.1",
-    "\\EntityFramework\\Models"
+    "\\EntityFramework\\Models",
+    "\\Entity_Models"
   ],
-  "SelectedNode": "\\EntityFramework\\Program.cs",
+  "SelectedNode": "\\Entity_Models\\Models",
   "PreviewInSolutionExplorer": false
 }

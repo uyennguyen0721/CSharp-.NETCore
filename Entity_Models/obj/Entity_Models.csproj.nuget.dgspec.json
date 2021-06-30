@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\EntityFramework.csproj": {}
+    "D:\\.NET Core Projects\\CSharp-.NETCore\\Entity_Models\\Entity_Models.csproj": {}
   },
   "projects": {
-    "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\EntityFramework.csproj": {
+    "D:\\.NET Core Projects\\CSharp-.NETCore\\Entity_Models\\Entity_Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\EntityFramework.csproj",
-        "projectName": "EntityFramework",
-        "projectPath": "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\EntityFramework.csproj",
+        "projectUniqueName": "D:\\.NET Core Projects\\CSharp-.NETCore\\Entity_Models\\Entity_Models.csproj",
+        "projectName": "Entity_Models",
+        "projectPath": "D:\\.NET Core Projects\\CSharp-.NETCore\\Entity_Models\\Entity_Models.csproj",
         "packagesPath": "C:\\Users\\uyenn\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET Core Projects\\CSharp-.NETCore\\EntityFramework\\obj\\",
+        "outputPath": "D:\\.NET Core Projects\\CSharp-.NETCore\\Entity_Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\uyenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,6 +52,12 @@
               "target": "Package",
               "version": "[5.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -63,14 +69,6 @@
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
               "version": "[5.0.0, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.25, )"
-            },
-            "MySql.Data.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.22, )"
             }
           },
           "imports": [

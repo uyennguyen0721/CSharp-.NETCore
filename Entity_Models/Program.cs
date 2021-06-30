@@ -137,6 +137,42 @@ namespace Entity_Models
             //    Console.WriteLine("Category == null");
             //}
 
+            Console.WriteLine("------------------------------");
+
+            //Tìm theo ID
+            var pr = dbcontext.Products.Find(3);
+            pr.PrintInfo();
+
+            Console.WriteLine("------------------------------");
+
+            //Tìm các sp có giá >= 500
+            var products1 = from p in dbcontext.Products
+                           where p.Price >= 10
+                           select p;
+            products1.ToList().ForEach(p => p.PrintInfo());
+
+            Console.WriteLine("------------------------------");
+
+            //In ra các sản phẩm có chứa kí tự "a" trong tên
+            var products2 = from p in dbcontext.Products
+                            where p.ProductName.ToLower().Contains("a")
+                            orderby p.Price descending
+                            select p;
+            products2.Take(2).ToList().ForEach(p => p.PrintInfo()); //Take(2) : lấy ra 2 sp
+
+            Console.WriteLine("------------------------------");
+
+            //lấy ra tên các sp, giá, loại sp, mô tả
+            var products3 = from p in dbcontext.Products
+                            join c in dbcontext.Categories on p.Category.CategoryId equals c.CategoryId
+                            select new
+                            {
+                                ten = p.ProductName,
+                                gia = p.Price,
+                                loai = c.CategoryName,
+                                mota = c.Description
+                            };
+            products3.ToList().ForEach(p => Console.WriteLine($"{p.ten,25} {p.gia,10} {p.loai,15} {p.mota,25}"));
         }
 
 

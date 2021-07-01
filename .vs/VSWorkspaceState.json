@@ -3,8 +3,8 @@
     "",
     "\\EntityFramework",
     "\\EntityFramework\\Models",
-    "\\Entity_Models"
+    "\\Entity_FluentAPI"
   ],
-  "SelectedNode": "\\Entity_Models\\Models",
+  "SelectedNode": "\\Entity_FluentAPI\\obj",
   "PreviewInSolutionExplorer": false
 }

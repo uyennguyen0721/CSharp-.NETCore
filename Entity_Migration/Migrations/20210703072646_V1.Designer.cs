@@ -3,14 +3,16 @@ using Entity_Migration.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entity_Migration.Migrations
 {
     [DbContext(typeof(WebContext))]
-    partial class WebContextModelSnapshot : ModelSnapshot
+    [Migration("20210703072646_V1")]
+    partial class V1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,6 +65,7 @@ namespace Entity_Migration.Migrations
                 {
                     b.Property<int>("TagId")
                         .ValueGeneratedOnAdd()
+                        .HasMaxLength(20)
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

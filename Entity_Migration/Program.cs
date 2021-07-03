@@ -6,7 +6,7 @@ namespace Entity_Migration
     {
         static void Main(string[] args)
         {
-            //Migration: code => database
+            //Migration: thực hiện code => cập nhật lên database ---> Thiết kế CSDL từ đầu, chưa có CSDL
             /* dotnet ef migrations add <MigrationName> 
              VD ta tạo một migration có tên V0: dotnet ef migrations add V0 
 
@@ -31,7 +31,29 @@ namespace Entity_Migration
                 dotnet ef database update <MigrationName>
              
              * Để xóa database ta thực hiện các bước sau:
-                dotnet ef database drop -f*/
+                dotnet ef database drop -f
+            
+             * Để hiển thị tất cả các câu truy vấn sql mà nó thực hiện từ migration đầu đến migration cuối:
+                dotnet ef migrations script
+            
+             * Để hiển thị tất cả các câu truy vấn sql mà nó cập nhật từ migration 1 sang migration 2:
+                dotnet ef migrations script <Migration1_Name> <Migration2_Name>
+            
+             * Để lưu tất cả các truy vấn tạo migration ra file script sql:
+                dotnet ef migrations script -o <FileName.sql>
+            
+             
+             // Scafford: sinh ra Models từ database có sẵn
+                dotnet ef dbcontext scaffold -o Models -f -d <Chuỗi kết nối>
+
+                * Trong các tham số trên thì:
+                    -o Models thư mục lưu các entity được sinh ra
+                    -f cho phép ghi đè file
+                    -d ưu tiên sử dụng kỹ thuật Data Annotation nếu có thể - nếu không thể thì dùng FLuent API
+            
+             Ví dụ: 
+                Chuỗi kết nối: "Server=DESKTOP-3VODAHR\SQLEXPRESS;Database=shopdata;Trusted_Connection=True;"
+                Hay: "Data Source=localhost,1433;Initial Catalog=shopdata;User ID=SA;Password=Password123"*/
 
         }
     }

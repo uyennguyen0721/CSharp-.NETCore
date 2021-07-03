@@ -9,8 +9,9 @@ namespace Entity_Migration.Models
 {
     public class WebContext : DbContext
     {
-        public DbSet<Article> articles { set; get; }        // bảng article
-        public DbSet<Tag> tags { set; get; }                // bảng tag
+        public DbSet<Article> Articles { set; get; }        // bảng Article
+        public DbSet<Tag> Tags { set; get; }                // bảng Tag
+        public DbSet<ArticleTag> ArticleTags { set; get; }
 
         // chuỗi kết nối với tên db sẽ làm  việc đặt là webdb
         public const string ConnectStrring = @"Server=DESKTOP-3VODAHR\\SQLEXPRESS;Database=shopdata;Trusted_Connection=True;";
@@ -28,8 +29,19 @@ namespace Entity_Migration.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(ConnectStrring);
             optionsBuilder.UseLoggerFactory(GetLoggerFactory());       // bật logger
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ArticleTag>(entity =>
+            {
+                entity.HasIndex(articleTag => new { articleTag.ArticleTagId, articleTag.TagId })
+                      .IsUnique(); // thiết lập duy nhất
+            });
         }
 
 

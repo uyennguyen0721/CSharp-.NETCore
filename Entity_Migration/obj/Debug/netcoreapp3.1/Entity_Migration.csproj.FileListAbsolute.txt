@@ -74,3 +74,4 @@ D:\.NET Core Projects\CSharp-.NETCore\Entity_Migration\obj\Debug\netcoreapp3.1\E
 D:\.NET Core Projects\CSharp-.NETCore\Entity_Migration\obj\Debug\netcoreapp3.1\Entity_Migration.dll
 D:\.NET Core Projects\CSharp-.NETCore\Entity_Migration\obj\Debug\netcoreapp3.1\Entity_Migration.pdb
 D:\.NET Core Projects\CSharp-.NETCore\Entity_Migration\obj\Debug\netcoreapp3.1\Entity_Migration.genruntimeconfig.cache
+D:\.NET Core Projects\CSharp-.NETCore\Entity_Migration\obj\Debug\netcoreapp3.1\Entity_Migration.csprojAssemblyReference.cache

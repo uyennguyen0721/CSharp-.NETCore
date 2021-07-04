@@ -45,6 +45,9 @@ namespace ASP_HelloWorld
                 {
                     //Tùy biến thêm về Host
 
+                    //Thay đổi  thư mục chứa các file tĩnh (mặc định là wwwroot) thành thư mục có tên là public
+                    //webBuilder.UseWebRoot("public")
+                    
                     webBuilder.UseStartup<Startup>();
                 });
     }

@@ -57,8 +57,8 @@ public static class HtmlHelper
 
         string menuhtml = $@"
                     <div class=""container"">
-                        <nav class=""navbar navbar-expand-lg navbar-dark bg-danger"">
-                            <a class=""navbar-brand"" href=""/"">XTLAB</a>
+                        <nav class=""navbar navbar-expand-lg navbar-dark bg-primary"">
+                            <a class=""navbar-brand"" href=""/"">VLOG</a>
                             <button class=""navbar-toggler"" type=""button""
                                 data-toggle=""collapse"" data-target=""#my-nav-bar""
                                 aria-controls=""my-nav-bar"" aria-expanded=""false"" aria-label=""Toggle navigation"">
@@ -108,17 +108,16 @@ public static class HtmlHelper
         return $@"
           <div class=""container"">
             <div class=""jumbotron"">
-                <h1 class=""display-4"">Đây là một trang Web .NET Core</h1>
-                <p class=""lead"">Trang Web này xây dựng trên nền tảng  <code>.NET Core</code>,
-                chưa sử dụng kỹ thuật MVC - nhằm mục đích học tập.
-                Mã nguồn trang này tại <a target=""_blank""
-                    href=""https://github.com/xuanthulabnet/learn-cs-netcore/blob/master/ASP_NET_CORE/03.RequestResponse/"">
-                    Mã nguồn Ví dụ</a>
+                <h1 class=""display-4"">Đây là một chiếc Blog của Uyên Nguyễn</h1>
+                <p class=""lead"">Nơi lan tỏa niềm vui và thể hiện niềm đam mê với những dòng code. Đừng làm cho việc viết code trở thành một áp lực, hãy biến nó trở thành một niềm đam mê của bạn
+                .Bạn có thể truy cập ghé thăm github của tôi <a target=""_blank""
+                    href=""https://github.com/uyennguyen0721"">
+                    tại đây</a>
                 
                 </p>
                 <hr class=""my-4"">
-                <p><code>.NET Core</code> là một hệ thống chạy đa nền tảng (Windows, Linux, macOS)</p>
-                <a class=""btn btn-danger btn-lg"" href=""https://xuanthulab.net/lap-trinh-c-co-ban/"" role=""button"">Xem thêm</a>
+                <p><b>Developer</b> là một công việc đòi hỏi sự tư duy, cẩn thận và một niềm đam mê mãnh liệt...</p>
+                <a class=""btn btn-primary btn-lg"" href=""https://toidicodedao.com/2018/11/29/lam-sao-de-co-dam-me-lap-trinh/"" role=""button"">Xem thêm</a>
             </div>
         </div>
          ";

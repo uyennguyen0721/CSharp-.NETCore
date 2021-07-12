@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,18 +38,18 @@ namespace ASP_Webpack
                             new object[] {
                                 new
                                 {
-                                    url = "/abc",
-                                    label = "Menu Abc"
+                                    url = "/stories",
+                                    label = "Những mẫu chuyện"
                                 },
                                 new
                                 {
-                                    url = "/xyz",
-                                    label = "Menu Xyz"
+                                    url = "/news",
+                                    label = "Tin tức"
                                 }
                             }, context.Request
                         );
 
-                    var html = HtmlHelper.HtmlDocument("XIN CH�O", menu + HtmlHelper.HtmlTrangchu());
+                    var html = HtmlHelper.HtmlDocument("Blog's Uyên", menu + HtmlHelper.HtmlTrangchu());
                     await context.Response.WriteAsync(html);
                 });
 

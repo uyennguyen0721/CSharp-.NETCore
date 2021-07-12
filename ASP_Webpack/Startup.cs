@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using ASP_Webpack.mylib;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,47 +36,41 @@ namespace ASP_Webpack
                 endpoints.MapGet("/", async context =>
                 {
                     var menu = HtmlHelper.MenuTop(
-                            new object[] {
-                                new
-                                {
-                                    url = "/stories",
-                                    label = "Những mẫu chuyện"
-                                },
-                                new
-                                {
-                                    url = "/news",
-                                    label = "Tin tức"
-                                }
-                            }, context.Request
+                            HtmlHelper.DefaultMenuTopItems(), context.Request
                         );
 
-                    var html = HtmlHelper.HtmlDocument("Blog's Uyên", menu + HtmlHelper.HtmlTrangchu());
+                    var html = HtmlHelper.HtmlDocument("Uyen's Blog", menu + HtmlHelper.HtmlTrangchu());
                     await context.Response.WriteAsync(html);
                 });
 
-                endpoints.MapGet("/RequestInfo", async context =>
+                endpoints.MapGet("/code-stories", async context =>
                 {
-                    await context.Response.WriteAsync("RequestInfo");
+                    var menu = HtmlHelper.MenuTop(HtmlHelper.DefaultMenuTopItems(), context.Request);
+
+                    var info = StoriesOfCode.Stories(context.Request);
+
+                    var html = HtmlHelper.HtmlDocument("Chuyện của Code ", menu + info);
+                    await context.Response.WriteAsync(html);
                 });
 
-                endpoints.MapGet("/EndCoding", async context =>
+                endpoints.MapGet("/posts", async context =>
                 {
-                    await context.Response.WriteAsync("EndCoding");
+                    await context.Response.WriteAsync("Bài viết");
                 });
 
-                endpoints.MapGet("/Cookies", async context =>
+                endpoints.MapGet("/about", async context =>
                 {
-                    await context.Response.WriteAsync("Cookies");
+                    await context.Response.WriteAsync("Hòa mình cùng Uyên Uyên");
                 });
 
-                endpoints.MapGet("/Json", async context =>
+                endpoints.MapGet("/coding", async context =>
                 {
-                    await context.Response.WriteAsync("Json");
+                    await context.Response.WriteAsync("Nghề coding");
                 });
 
-                endpoints.MapGet("/Form", async context =>
+                endpoints.MapGet("/moment", async context =>
                 {
-                    await context.Response.WriteAsync("Form");
+                    await context.Response.WriteAsync("Bắt nhịp khoảnh khắc");
                 });
             });
         }

@@ -58,7 +58,7 @@ public static class HtmlHelper
         string menuhtml = $@"
                     <div class=""container"">
                         <nav class=""navbar navbar-expand-lg navbar-dark bg-primary"">
-                            <a class=""navbar-brand"" href=""/"">VLOG</a>
+                            <a class=""navbar-brand"" href=""/""><b>UYEN'S BLOG</b></a>
                             <button class=""navbar-toggler"" type=""button""
                                 data-toggle=""collapse"" data-target=""#my-nav-bar""
                                 aria-controls=""my-nav-bar"" aria-expanded=""false"" aria-label=""Toggle navigation"">
@@ -79,26 +79,31 @@ public static class HtmlHelper
     public static object[] DefaultMenuTopItems()
     {
         return new object[] {
+
               new {
-                  url = "/RequestInfo",
-                  label = "Request"
+                  url = "/",
+                  label = "Trang chủ"
               },
               new {
-                  url = "/Form",
-                  label = "Form"
+                  url = "/code-stories",
+                  label = "Chuyện của Code"
+              },
+              new {
+                  url = "/posts",
+                  label = "Bài viết"
               }
               ,
               new {
-                  url = "/Encoding",
-                  label = "Encoding"
+                  url = "/about",
+                  label = "Giới thiệu"
               },
               new {
-                  url = "/Cookies",
-                  label = "Cookies"
+                  url = "/coding",
+                  label = "Nghề coding"
               },
               new {
-                  url = "/Json",
-                  label = "JSON"
+                  url = "/moment",
+                  label = "Khoảnh khắc"
               }
           };
     }
@@ -108,9 +113,9 @@ public static class HtmlHelper
         return $@"
           <div class=""container"">
             <div class=""jumbotron"">
-                <h1 class=""display-4"">Đây là một chiếc Blog của Uyên Nguyễn</h1>
-                <p class=""lead"">Nơi lan tỏa niềm vui và thể hiện niềm đam mê với những dòng code. Đừng làm cho việc viết code trở thành một áp lực, hãy biến nó trở thành một niềm đam mê của bạn
-                .Bạn có thể truy cập ghé thăm github của tôi <a target=""_blank""
+                <h4 class=""display-4"">Chào mừng mọi người đã đến với chiếc Blog của Uyên Nguyễn</h4>
+                <p class=""lead"">Nơi lan tỏa niềm vui và thể hiện niềm đam mê với những dòng code. Đừng làm cho việc viết code trở thành một áp lực, hãy biến nó trở thành một niềm đam mê của bạn.
+                Bạn có thể ghé thăm github của tôi <a target=""_blank""
                     href=""https://github.com/uyennguyen0721"">
                     tại đây</a>
                 

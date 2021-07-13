@@ -9,7 +9,6 @@ D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\bin\Debug\net5.0\ASP_Webpack.r
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\bin\Debug\net5.0\ASP_Webpack.dll
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\bin\Debug\net5.0\ref\ASP_Webpack.dll
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\bin\Debug\net5.0\ASP_Webpack.pdb
-D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.csproj.AssemblyReference.cache
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.GeneratedMSBuildEditorConfig.editorconfig
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.AssemblyInfoInputs.cache
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.AssemblyInfo.cs
@@ -23,3 +22,4 @@ D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ref\ASP_Webpa
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.pdb
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.genruntimeconfig.cache
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\staticwebassets\ASP_Webpack.StaticWebAssets.xml
+D:\.NET Core Projects\CSharp-.NETCore\ASP_Webpack\obj\Debug\net5.0\ASP_Webpack.csproj.AssemblyReference.cache

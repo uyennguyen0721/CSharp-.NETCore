@@ -3095,6 +3095,38 @@ a.btn.disabled, fieldset:disabled a.btn {
         margin-top: .5rem
     }
 
+.btn-indigo {
+    color: #6610f2;
+    background-color: #6610f2;
+    border-color: #6224c7
+}
+
+    .btn-indigo:hover {
+        color: #6610f2;
+        background-color: #260161;
+        border-color: #301063
+    }
+
+    .btn-indigo.focus, .btn-indigo:focus {
+        box-shadow: 0 0 0 .2rem rgba(75, 14, 173,.5)
+    }
+
+    .btn-indigo.disabled, .btn-indigo:disabled {
+        color: #6610f2;
+        background-color: #6610f2;
+        border-color: #6610f2
+    }
+
+        .btn-indigo:not(:disabled):not(.disabled).active, .btn-indigo:not(:disabled):not(.disabled):active, .show > .btn-indigo.dropdown-toggle {
+            color: #6610f2;
+            background-color: #4203a6;
+            border-color: #5220a1
+        }
+
+            .btn-indigo:not(:disabled):not(.disabled).active:focus, .btn-indigo:not(:disabled):not(.disabled):active:focus, .show > .btn-indigo.dropdown-toggle:focus {
+                box-shadow: 0 0 0 .2rem rgba(75, 14, 173,.5)
+            }
+
 input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].btn-block {
     width: 100%
 }
@@ -6090,6 +6122,10 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 
 .bg-transparent {
     background-color: transparent !important
+}
+
+.bg-indigo {
+    background-color: #6610f2 !important
 }
 
 .border {

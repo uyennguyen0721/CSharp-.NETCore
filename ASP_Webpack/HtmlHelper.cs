@@ -21,7 +21,7 @@ public static class HtmlHelper
                             <link rel=""stylesheet"" href=""/css/bootstrap.min.css"" />
                             <script src=""/js/jquery.min.js"">
                             </script><script src=""/js/popper.min.js"">
-                            </script><script src=""/js/bootstrap.min.js""></script> 
+                            </script><script src=""/js/bootstrap.min.js""></script>
                         </head>
                         <body>
                             {content}
@@ -57,7 +57,7 @@ public static class HtmlHelper
 
         string menuhtml = $@"
                     <div class=""container"">
-                        <nav class=""navbar navbar-expand-lg navbar-dark bg-primary"">
+                        <nav class=""navbar navbar-expand-lg navbar-dark bg-success"">
                             <a class=""navbar-brand"" href=""/""><b>UYEN'S BLOG</b></a>
                             <button class=""navbar-toggler"" type=""button""
                                 data-toggle=""collapse"" data-target=""#my-nav-bar""
@@ -111,20 +111,20 @@ public static class HtmlHelper
     public static string HtmlTrangchu()
     {
         return $@"
-          <div class=""container"">
-            <div class=""jumbotron"">
-                <h4 class=""display-4"">Chào mừng mọi người đã đến với chiếc Blog của Uyên Nguyễn</h4>
-                <p class=""lead"">Nơi lan tỏa niềm vui và thể hiện niềm đam mê với những dòng code. Đừng làm cho việc viết code trở thành một áp lực, hãy biến nó trở thành một niềm đam mê của bạn.
-                Bạn có thể ghé thăm github của tôi <a target=""_blank""
-                    href=""https://github.com/uyennguyen0721"">
-                    tại đây</a>
+            <div class=""container"">
+                <div class=""jumbotron"">
+                    <h4 class=""display-4"">Chào mừng mọi người đã đến với chiếc Blog của Uyên Nguyễn</h4>
+                    <p class=""lead"">Nơi lan tỏa niềm vui và thể hiện niềm đam mê với những dòng code. Đừng làm cho việc viết code trở thành một áp lực, hãy biến nó trở thành một niềm đam mê của bạn.
+                    Bạn có thể ghé thăm github của tôi <a target=""_blank""
+                        href=""https://github.com/uyennguyen0721"">
+                        tại đây</a>
                 
-                </p>
-                <hr class=""my-4"">
-                <p><b>Developer</b> là một công việc đòi hỏi sự tư duy, cẩn thận và một niềm đam mê mãnh liệt...</p>
-                <a class=""btn btn-primary btn-lg"" href=""https://toidicodedao.com/2018/11/29/lam-sao-de-co-dam-me-lap-trinh/"" role=""button"">Xem thêm</a>
+                    </p>
+                    <hr class=""my-4"">
+                    <p><b>Developer</b> là một công việc đòi hỏi sự tư duy, cẩn thận và một niềm đam mê mãnh liệt...</p>
+                    <a class=""btn btn-success btn-lg"" href=""https://toidicodedao.com/2018/11/29/lam-sao-de-co-dam-me-lap-trinh/"" role=""button"">Xem thêm</a>
+                </div>
             </div>
-        </div>
          ";
 
     }

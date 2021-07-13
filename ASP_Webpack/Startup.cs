@@ -47,7 +47,7 @@ namespace ASP_Webpack
                 {
                     var menu = HtmlHelper.MenuTop(HtmlHelper.DefaultMenuTopItems(), context.Request);
 
-                    var info = StoriesOfCode.Stories(context.Request);
+                    var info = StoriesOfCode.Stories();
 
                     var html = HtmlHelper.HtmlDocument("Chuyện của Code ", menu + info);
                     await context.Response.WriteAsync(html);

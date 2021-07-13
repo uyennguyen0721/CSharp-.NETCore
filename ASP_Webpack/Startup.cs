@@ -38,8 +38,9 @@ namespace ASP_Webpack
                     var menu = HtmlHelper.MenuTop(
                             HtmlHelper.DefaultMenuTopItems(), context.Request
                         );
+                    var info = HomePages.HtmlTrangchu();
 
-                    var html = HtmlHelper.HtmlDocument("Uyen's Blog", menu + HtmlHelper.HtmlTrangchu());
+                    var html = HtmlHelper.HtmlDocument("Uyen's Blog", menu + info);
                     await context.Response.WriteAsync(html);
                 });
 

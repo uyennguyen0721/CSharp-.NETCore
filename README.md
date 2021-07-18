@@ -25,3 +25,7 @@ Nullable dùng để khai báo biến kiểu tham trị có khả năng nhận g
 
 * Kiểm tra biến đó có giá trị hay không (khác null hay không) ta dùng phương thức HasValue, phương thức này trả về kiểu bool
 Để gọi phương thức ta thực hiện <tên biến>.HasValue
+
+* Sử dụng Mailkit để gửi mail trong ASP.NET Core: 
+	- Cài packet Mailkit: dotnet add package MailKit
+	- Cài packet MimeKit: dotnet add package MimeKit

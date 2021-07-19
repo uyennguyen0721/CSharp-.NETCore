@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["title"]</title>
+</head>
+<body>
+    <div style="background-color: blueviolet">PHẦN HEADER</div>
+    @*
+        Khi thực thi thì toàn bộ nội dung của FirstPage sẽ được chèn vào renderbody
+    *@
+
+    @RenderBody()
+
+    <div style="background-color: blueviolet">PHẦN FOOTER</div>
+</body>
+</html>

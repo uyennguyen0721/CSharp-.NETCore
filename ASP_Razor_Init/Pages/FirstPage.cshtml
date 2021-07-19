@@ -1,5 +1,8 @@
 ﻿@page "/test1/{solanlap:int?}"
 @model ASP_Razor_Init.Pages.FirstPageModel
+@{ 
+    ViewData["title"] = "TRANG ĐẦU TIÊN";
+}
 
 <h1 style="color:green">@Model.title</h1>
 
@@ -28,3 +31,5 @@
     }
 </ol>
 <p>@Model.Welcome("Nguyễn Thị Thu Uyên")</p>
+
+<a asp-page="SecondPage">Trang thứ hai</a>

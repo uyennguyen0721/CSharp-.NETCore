@@ -40,3 +40,6 @@ D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Area
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Areas\Products\Pages\Sanphammoi.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Areas\Users\Pages\Index.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Areas\Users\Pages\Login.cshtml.g.cs
+D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Pages\Shared\_MyLayout.cshtml.g.cs
+D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+D:\.NET Core Projects\CSharp-.NETCore\ASP_Razor_Init\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs

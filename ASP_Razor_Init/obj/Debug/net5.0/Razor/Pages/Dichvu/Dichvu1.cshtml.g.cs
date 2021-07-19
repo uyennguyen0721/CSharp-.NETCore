@@ -13,6 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d2aab2365de539357e068ca60a0ff4f1f992e550", @"/Pages/Dichvu/Dichvu1.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"561fc835cea4a52ac7dee68ef187b72a5522c638", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Dichvu_Dichvu1 : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

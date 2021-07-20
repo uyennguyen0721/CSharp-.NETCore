@@ -1,0 +1,50 @@
+﻿@page
+@using ASP_Razor_Partial.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <label>Nhập tên của bạn:</label>
+    <input name="username" type="text"/>
+    <input type="submit" value="Gửi"/>
+</form>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@await Component.InvokeAsync("ProductBox", true)
+
+@await Html.PartialAsync("_Message")
+
+@{
+    var products = new object[] {
+            new Product() { Name = "Iphone X", Description = "Điện thoại Iphone của Apple", Price = 1000 },
+            new Product() { Name = "Samsung Galaxy", Description = "Điện thoại Samsung Galaxy của Samsung", Price = 800 },
+            new Product() { Name = "Nokia Lumia", Description = "Điện thoại Nokia Lumia của Nokia", Price = 500 }
+        };
+}
+
+
+<div class="row">
+    @foreach (var product in products)
+    {
+        <div class="col">
+            @*Cách chèn thứ nhất*@
+            <partial name="_ProductItem" model="product" />
+        </div>
+    }
+</div>
+
+@*
+    @*Cách chèn thứ hai
+    @await Html.PartialAsync("_ProductItem", product)
+
+    @*Cách chèn thứ ba
+    @{
+        await Html.RenderPartialAsync("_ProductItem", product);
+    }
+*@

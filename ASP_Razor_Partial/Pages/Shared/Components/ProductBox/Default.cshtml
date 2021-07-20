@@ -1,0 +1,11 @@
+﻿@using ASP_Razor_Partial.Models
+@model List<Product>
+
+<ul class="list-group"?>
+    @foreach(var product in Model)
+    {
+        <li class="list-group-item">
+            @product.Name <strong>@product.Price</strong>
+        </li>
+    }
+</ul>

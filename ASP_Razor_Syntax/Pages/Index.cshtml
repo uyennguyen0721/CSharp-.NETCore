@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var xinchao = "<div class='alert alert-danger'>Xin chào các bạn</div>";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="text-danger">Đây là Project về cú pháp Razor - @this.title</div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<ul>
+    <li>@xinchao</li>
+    <li>@Html.Raw("Xin chào các bạn")</li>
+    <li>@Html.Raw(xinchao)</li>
+</ul>
+@{
+    var Age = 20;
+    string[] cacsanpham = new string[] { "Iphone", "Samsung", "Nokia" };
+    foreach (var name in cacsanpham)
+    {
+        <text> [@name] </text>
+    }
+
+    <br />
+    foreach (var name in cacsanpham)
+    {
+        @: [@name]
+    }
+}
+
+@functions{ 
+    string title { set; get; } = "UYÊN NGUYỄN";
+}
+
+@if(Age >= 18)
+{
+    <p>Bạn @Age tuổi, được truy cập</p>
+}
+else
+{
+    <p>Bạn @Age tuổi, không được truy cập</p>
+}

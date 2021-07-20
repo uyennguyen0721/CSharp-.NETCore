@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, taghelperexample
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<a asp-page="ViewProduct" asp-route-id="3">Xem sản phẩm 3</a>
+
+<form>
+    <label asp-for="Username"></label>
+    <input asp-for="Username" />
+    <hr />
+    @*
+        Cách 2:
+        @Html.Label("Username")
+        @Html.TextBox("Username")
+    *@
+</form>
+
+@{
+    var productlist = new List<String> {
+        "Tên Sản phẩm 1",
+        "Tên Sản phẩm 2",
+        "Tên Sản phẩm 3"
+     };
+}
+<mylist list-title="Danh sách sản phẩm" list-items="@productlist"></mylist>

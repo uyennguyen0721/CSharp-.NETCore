@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Razor_ModelBinding", "ASP_Razor_ModelBinding.csproj", "{C903DBCA-4CAD-4891-A6B7-1F6B01EF9285}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C903DBCA-4CAD-4891-A6B7-1F6B01EF9285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C903DBCA-4CAD-4891-A6B7-1F6B01EF9285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C903DBCA-4CAD-4891-A6B7-1F6B01EF9285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C903DBCA-4CAD-4891-A6B7-1F6B01EF9285}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E16B2A6E-5ECB-43F6-93C0-18730D8F889F}
+	EndGlobalSection
+EndGlobal

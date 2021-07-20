@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ASP_Razor_Layout</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <a class="navbar-brand" href="#">MyWeb</a>
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#my-nav-bar"
+                    aria-controls="my-nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="my-nav-bar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="Index">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-page="Privacy">Chính sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="Post1">Bài viết 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="Post2">Bài viết 2</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="bg-info pb-4">
+        @RenderBody()
+    </div>
+    <div class="bg-success">
+        FOOTER
+        @await RenderSectionAsync("NoidungFooter", required: false);
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>

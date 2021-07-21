@@ -8,7 +8,7 @@ D:\.NET Core Projects\CSharp-.NETCore\TestAdapter\obj\Debug\netcoreapp3.1\
 TestAdapter
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\.NET Core Projects\CSharp-.NETCore\TestAdapter\App.xaml
 11407045341
 
@@ -16,5 +16,5 @@ D:\.NET Core Projects\CSharp-.NETCore\TestAdapter\App.xaml
 202-1003144713
 MainWindow.xaml;
 
-True
+False
 

@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    // xây dựng Func phát sinh Url từ page ./Index
+    Func<int?, string> generateUrl = (int? _pagenumber) =>
+    {
+        return Url.Page("./User", new { pageNumber = _pagenumber });
+    };
+
+    var datapaging = new
+    {
+        currentPage = 2,    // trang hiện tại
+        countPages = 20,   // tổng  số trang
+        generateUrl = generateUrl
+    };
+
+}
+<partial name="_Paging" model="@datapaging" />

@@ -163,6 +163,7 @@ D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Regis
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\MailKit.dll
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\MimeKit.dll
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
@@ -203,4 +204,7 @@ D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Regis
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
+D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+D:\.NET Core Projects\CSharp-.NETCore\ASP.NET Razor\ASP.NET Razor Identity\Register_Login_Logout\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Twitter.dll

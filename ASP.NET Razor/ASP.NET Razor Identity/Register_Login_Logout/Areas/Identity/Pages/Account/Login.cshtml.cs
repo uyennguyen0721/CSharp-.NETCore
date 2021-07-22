@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using Register_Login_Logout.Models;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Register_Login_Logout.Models;
 using Register_Login_Logout.Views.Shared.Components.MessagePage;
 
 namespace Register_Login_Logout.Areas.Identity.Pages.Account
@@ -83,29 +83,24 @@ namespace Register_Login_Logout.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // Thử login bằng username/password
-                var result = await _signInManager.PasswordSignInAsync(
-                    Input.UserNameOrEmail,
-                    Input.Password,
-                    Input.RememberMe,
-                    true
-                );
 
-                if (!result.Succeeded)
+                IdentityUser user = await _userManager.FindByEmailAsync(Input.UserNameOrEmail);
+                if (user == null)
+                    user = await _userManager.FindByNameAsync(Input.UserNameOrEmail);
+
+                if (user == null)
                 {
-                    // Thất bại username/password -> tìm user theo email, nếu thấy thì thử đăng nhập
-                    // bằng user tìm được
-                    var user = await _userManager.FindByEmailAsync(Input.UserNameOrEmail);
-                    if (user != null)
-                    {
-                        result = await _signInManager.PasswordSignInAsync(
-                            user,
-                            Input.Password,
-                            Input.RememberMe,
-                            true
-                        );
-                    }
+                    ModelState.AddModelError(string.Empty, "Tài khoản không tồn tại.");
+                    return Page();
                 }
+
+                var result = await _signInManager.PasswordSignInAsync(
+                        user.UserName,
+                        Input.Password,
+                        Input.RememberMe,
+                        true
+                    );
+
 
                 if (result.Succeeded)
                 {
@@ -134,9 +129,8 @@ namespace Register_Login_Logout.Areas.Identity.Pages.Account
                     return Page();
                 }
             }
-
-            // If we got this far, something failed, redisplay form
             return Page();
+
         }
     }
 }

@@ -7,13 +7,13 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Register_Login_Logout.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Register_Login_Logout.Models;
 
 namespace Register_Login_Logout.Areas.Identity.Pages.Account
 {
@@ -74,13 +74,13 @@ namespace Register_Login_Logout.Areas.Identity.Pages.Account
             public string UserName { set; get; }
         }
 
+        // Đăng ký tài khoản theo dữ liệu form post tới
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        // Đăng ký tài khoản theo dữ liệu form post tới
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");

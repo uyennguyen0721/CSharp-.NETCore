@@ -54,6 +54,27 @@ namespace Register_Login_Logout
                     identityservice.AddDefaultTokenProviders();
              */
 
+            services.AddAuthentication()
+                .AddGoogle(googleOptions => {
+                    // Đọc thông tin Authentication:Google từ appsettings.json
+                    IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
+
+                    // Thiết lập ClientID và ClientSecret để truy cập API google
+                    googleOptions.ClientId = googleAuthNSection["ClientId"];
+                    googleOptions.ClientSecret = googleAuthNSection["ClientSecret"];
+                    // Cấu hình Url callback lại từ Google (không thiết lập thì mặc định là /signin-google)
+                    googleOptions.CallbackPath = "/dang-nhap-tu-google";
+
+                })
+                .AddFacebook(facebookOptions => {
+                    // Đọc cấu hình
+                    IConfigurationSection facebookAuthNSection = Configuration.GetSection("Authentication:Facebook");
+                    facebookOptions.AppId = facebookAuthNSection["AppId"];
+                    facebookOptions.AppSecret = facebookAuthNSection["AppSecret"];
+                    // Thiết lập đường dẫn Facebook chuyển hướng đến
+                    facebookOptions.CallbackPath = "/dang-nhap-tu-facebook";
+                });
+
             // Truy cập IdentityOptions
             services.Configure<IdentityOptions>(options => {
                 // Thiết lập về Password
@@ -65,8 +86,8 @@ namespace Register_Login_Logout
                 options.Password.RequiredUniqueChars = 1; // Số ký tự riêng biệt
 
                 // Cấu hình Lockout - khóa user
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); // Khóa 5 phút
-                options.Lockout.MaxFailedAccessAttempts = 5; // Thất bại 5 lầ thì khóa
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1); // Khóa 1 phút
+                options.Lockout.MaxFailedAccessAttempts = 3; // Thất bại 5 lầ thì khóa
                 options.Lockout.AllowedForNewUsers = true;
 
                 // Cấu hình về User.

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VzNyNeCg4zsRX3yeHihdHSB8FZpM5+2oMz+rfqrVKDb7gb6tt/pRH3jP33wBWpOKLCT9Z+PBBxg9V2g5gQnq4g==",
+  "dgSpecHash": "OiUtWtlYRe8+rvnHrpiauuC4ZiIti5NSBtNCqA0q+lBhQzQBypdbgL7qxsvCwyvk8sB8VwRaqrHNZkE/E1GmZw==",
   "success": true,
   "projectFilePath": "D:\\.NET Core Projects\\CSharp-.NETCore\\ASP.NET Razor\\ASP.NET Razor Identity\\Register_Login_Logout\\Register_Login_Logout.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,8 @@
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.8\\microsoft.entityframeworkcore.analyzers.5.0.8.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.8\\microsoft.entityframeworkcore.design.5.0.8.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.8\\microsoft.entityframeworkcore.relational.5.0.8.nupkg.sha512",
-    "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.8\\microsoft.entityframeworkcore.sqlserver.5.0.8.nupkg.sha512",
+    "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.7\\microsoft.entityframeworkcore.sqlserver.5.0.7.nupkg.sha512",
+    "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.8\\microsoft.entityframeworkcore.tools.5.0.8.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\uyenn\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",

@@ -1,19 +1,23 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Register_Login_Logout.Data;
+using Register_Login_Logout.Areas.Identity;
+using Register_Login_Logout.Mail;
+using Register_Login_Logout.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Register_Login_Logout.Data;
-using Register_Login_Logout.Mail;
-using Register_Login_Logout.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Register_Login_Logout.Identity;
 
 namespace Register_Login_Logout
 {
@@ -30,6 +34,12 @@ namespace Register_Login_Logout
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddOptions(); // Kích hoạt Options
+            var mailsettings = Configuration.GetSection("MailSettings"); // đọc config
+            services.Configure<MailSettings>(mailsettings); // đăng ký để Inject
+
+            services.AddTransient<IEmailSender, SendMailService>(); // Đăng ký dịch vụ Mail
 
             // Đăng ký AppDbContext
             services.AddDbContext<AppDbContext>(options => {
@@ -101,11 +111,63 @@ namespace Register_Login_Logout
 
             });
 
-            services.AddOptions();                                        // Kích hoạt Options
-            var mailsettings = Configuration.GetSection("MailSettings");  // đọc config
-            services.Configure<MailSettings>(mailsettings);               // đăng ký để Inject
+            services.Configure<RouteOptions>(options => {
+                options.LowercaseUrls = true; // url chữ thường
+                options.LowercaseQueryStrings = false; // không bắt query trong url phải in thường
+            });
 
-            services.AddTransient<IEmailSender, SendMailService>();        // Đăng ký dịch vụ Mail
+            services.ConfigureApplicationCookie(options => {
+                // options.Cookie.HttpOnly = true;  
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.LoginPath = $"/login/";
+                options.LogoutPath = $"/logout/";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
+
+            services.Configure<SecurityStampValidatorOptions>(options =>
+            {
+                // Trên 30 giây truy cập lại sẽ nạp lại thông tin User (Role)
+                // SecurityStamp trong bảng User đổi -> nạp lại thông tinn Security
+                options.ValidationInterval = TimeSpan.FromSeconds(5);
+            });
+
+
+
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MinimumAge", policy => {
+                    policy.Requirements.Add(new MinimumAgeRequirement(18)
+                    {
+                        OpenTime = 8,
+                        CloseTime = 22
+                    });
+                });
+
+                options.AddPolicy("AdminDropdown", policy => {
+                    policy.RequireClaim("permission", "manage.user");
+                });
+
+
+                options.AddPolicy("MyPolicy1", policy => {
+                    policy.RequireRole("Vip");
+                });
+
+                options.AddPolicy("CanViewTest", policy => {
+                    policy.RequireRole("VipMember", "Editor");
+                });
+
+
+                options.AddPolicy("CanView", policy => {
+                    // policy.RequireRole("Editor");
+                    policy.RequireClaim("permision", "post.view");
+                });
+
+
+            });
+            services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>();
+            services.AddTransient<IAuthorizationHandler, CanUpdatePostAgeHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -127,11 +189,10 @@ namespace Register_Login_Logout
 
             app.UseRouting();
 
-            app.UseAuthentication();   // Phục hồi thông tin đăng nhập (xác thực)
-            app.UseAuthorization();   // Phục hồi thông tinn về quyền của User
+            app.UseAuthentication(); // Phục hồi thông tin đăng nhập (xác thực)
+            app.UseAuthorization(); // Phục hồi thông tinn về quyền của User
 
-            app.UseEndpoints(endpoints =>
-            {
+            app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
             });
         }

@@ -10,7 +10,7 @@ using Register_Login_Logout.Data;
 namespace Register_Login_Logout.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210722013356_Init")]
+    [Migration("20210722062039_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

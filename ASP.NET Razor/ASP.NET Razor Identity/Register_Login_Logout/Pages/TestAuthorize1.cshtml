@@ -1,0 +1,5 @@
+﻿@page "/test-authorize-1/"
+@inject Microsoft.AspNetCore.Identity.UserManager<Register_Login_Logout.Models.AppUser> UserManager
+@model Register_Login_Logout.Pages.TestAuthorize1Model
+@inject Microsoft.AspNetCore.Authorization.IAuthorizationService authorizationService
+<p class="alert alert-danger">@UserManager.GetUserName(User),  Bạn đang truy cập TestAuthorize1</p>
